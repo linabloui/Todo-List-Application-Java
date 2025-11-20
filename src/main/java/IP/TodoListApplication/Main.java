@@ -5,7 +5,7 @@ import IP.TodoListApplication.App.*;
 public class Main {
 
     /**
-     * To run the program, we will create a TodoList Object
+     * To run the program, we will create a Todo [SM-2]List Object
      * then we will run start on it
      *
      * Example of a task to add (pay attention to white space):
@@ -23,7 +23,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        TodoList toDoList = new TodoList();
+        Todo [SM-3]List toDoList = new TodoList();
 
         toDoList.start();
     }
