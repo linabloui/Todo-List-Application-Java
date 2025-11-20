@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 
 /**
- * This class is part of the TodoList application.
+ * This class is part of the Todo [SM-6]List application.
  * EditTask holds all methods related to edit an existing task
  * to our TodoList
  *

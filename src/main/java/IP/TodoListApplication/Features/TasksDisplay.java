@@ -4,7 +4,7 @@ import IP.TodoListApplication.DataSorting.*;
 import IP.TodoListApplication.App.*;
 
 /**
- * This class is part of the TodoList application.
+ * This class is part of the Todo List application.
  * TasksDisplay holds all methods related to printing out
  * all the tasks to the user
  *
@@ -19,15 +19,6 @@ public class TasksDisplay extends Actions {
     public void showActionsInformation() {
         System.out.println("");
         System.out.println("Here are all the tasks: ");
-    }
-
-    /**
-     * This is an unsupported operation added for the sake of extending my
-     * abstract class, therefore its unused.
-     */
-    @Override
-    public String readUserInput() {
-        throw new UnsupportedOperationException("The requested operation is not supported.");
     }
 
     /**
@@ -46,6 +37,5 @@ public class TasksDisplay extends Actions {
                     + DateSorting.convertDateToString(task.getDueDate(), "dd-MM-yyyy") + ", Status: "
                     + task.getStatus() + ", Project: " + task.getProjectName());
         });
-
     }
 }
