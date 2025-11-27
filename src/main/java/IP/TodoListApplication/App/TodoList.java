@@ -205,7 +205,8 @@ public class TodoList {
             }
         }
     }
-    public void addTask(String taskTitle) {
+    
+    public void addTask_Fun(String taskTitle) {
     if (taskTitle == null || taskTitle.trim().isEmpty()) {
         System.out.println("Error: Task title cannot be empty.");
         return;
@@ -221,6 +222,7 @@ public class TodoList {
     tasks.add(new Task(taskTitle));
     System.out.println("Task added successfully.");
 }
+
 
   
 }
