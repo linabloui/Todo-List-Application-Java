@@ -186,7 +186,8 @@ public class TodoList {
      *
      * @return userInput to the start() method, for it to be used
      */
-    public int readAction() {
+    public int readAction()
+     {
         List<Integer> availableActions = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         while (true) {
             try {
@@ -204,4 +205,22 @@ public class TodoList {
             }
         }
     }
+    public void addTask(String taskTitle) {
+    if (taskTitle == null || taskTitle.trim().isEmpty()) {
+        System.out.println("Error: Task title cannot be empty.");
+        return;
+    }
+
+    for (Task t : tasks) {
+        if (t.getTitle().equalsIgnoreCase(taskTitle)) {
+            System.out.println("Error: Task already exists.");
+            return;
+        }
+    }
+
+    tasks.add(new Task(taskTitle));
+    System.out.println("Task added successfully.");
+}
+
+  
 }
