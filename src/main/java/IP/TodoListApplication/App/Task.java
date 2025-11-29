@@ -23,6 +23,7 @@ public class Task {
     private LocalDate dueDate;
     private String status;
     private String projectName;
+    private String priority;
 
     /**
      * @return task's ID
@@ -97,6 +98,13 @@ public class Task {
     public void setProjectName(String projectName) {
         this.projectName = projectName;
     }
+    public String getPriority() {
+    return priority;
+}
+
+public void setPriority(String priority) {
+    this.priority = priority;
+}
 
     /**
      * buildTask is used to acquire task's elements and components
@@ -109,7 +117,7 @@ public class Task {
      * @param projectName IP.TodoListApplication.App.Task's project name to set
      * @return task task that was built accordingly with acquired elements and components
      */
-    public static Task buildTask(String id, String title, LocalDate dueDate, String status, String projectName) {
+    public static Task buildTask(String id, String title, LocalDate dueDate, String status, String projectName,String priority) {
         Task task = new Task();
 
         task.setId(id);
@@ -117,6 +125,7 @@ public class Task {
         task.setDueDate(dueDate);
         task.setStatus(status);
         task.setProjectName(projectName);
+        task.setPriority(priority);
 
         return task;
     }
@@ -129,7 +138,7 @@ public class Task {
 
     @Override
     public String toString() {
-        return id + "," + title + "," + DateSorting.convertDateToString(dueDate, "dd-MM-yyyy") + "," + status + "," + projectName;
+        return id + "," + title + "," + DateSorting.convertDateToString(dueDate, "dd-MM-yyyy") + "," + status + "," + projectName; +priority;
     }
 
 }
