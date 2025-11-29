@@ -82,6 +82,10 @@ public class AddTask extends Actions {
     @Override
     public void executeAction(String command) {
         String[] parts = command.split(",");
+        if (parts[0].trim().isEmpty()) {
+    System.out.println("Error: Task name cannot be empty.");
+    return;
+}
         Task task = Task.buildTask(parts[0], parts[1], DateSorting.parseDate("dd-MM-yyyy", parts[2]),
                 parts[3], parts[4]);
 
