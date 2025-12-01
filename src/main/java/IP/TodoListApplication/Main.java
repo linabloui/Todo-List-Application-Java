@@ -17,7 +17,7 @@ public class Main {
      *
      * After reading press 5 to display the tasks that were read from the file.
      *
-     * Enjoy using the program!
+     * Enjoy using the program.
      *
      */
     public static void main(String[] args) {
